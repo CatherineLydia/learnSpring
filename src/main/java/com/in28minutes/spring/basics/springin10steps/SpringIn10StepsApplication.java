@@ -23,6 +23,11 @@ public class SpringIn10StepsApplication {
 		//get the bean from applicationContext
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 
+		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
+
+		System.out.println("1. "+binarySearch);
+		System.out.println("2. "+binarySearch1);
+
 		int result = binarySearch.binarySearch(new int[]{12, 4, 6}, 3);
 
 		System.out.println(result);
