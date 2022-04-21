@@ -6,23 +6,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class BinarySearchImpl {
 
-
-    private SortAlgorithm sortAlgorithm;
-
     @Autowired
-    public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
-        System.out.println("Using setter injection");
-        this.sortAlgorithm = sortAlgorithm;
-    }
+    private SortAlgorithm bubbleSortAlgorithm;
+
+    //no constructor- no setter injection
+
 
     public int binarySearch(int[] numbers, int numberToSearch){
-        //Sorting an array- BubbleSort
-//        BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
 
-//        QuickSortAlgorithm quickSortAlgorithm =new QuickSortAlgorithm();
-
-        int[] sortedNumbers = sortAlgorithm.sort(numbers);
-        System.out.println(sortAlgorithm);
+        int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
+        System.out.println(bubbleSortAlgorithm);
         //Search the array
 
         //Return the result
